@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% csrf_token %}
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<meta http-equiv="Pragma" content="no-cache"> 
+<meta http-equiv="Cache-Control" content="no-cache"> 
+<meta http-equiv="Expires" content="0"> 
+<title>后台管理</title>
+<link href="{% static 'MySelenium/login.css' %}" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="login_box">
+      <div class="login_l_img"><img src="{% static 'MySelenium/login-img.png' %}" /></div>
+      <div class="login">
+          <div class="login_logo"><a href="#"><img src="{% static 'MySelenium/login_logo.png' %}" /></a></div>
+          <div class="login_name">
+            {% if message %}
+               <p>{{message}}</p>
+            {% else %}
+            <p>请登录</p>
+            {% endif %}
+          </div>
+          <form method="post">
+              {{form.username}}
+              {{form.password}}
+              <input value="登录" style="width:100%;" type="submit">
+          </form>
+      </div>
+      <div class="copyright">超级无敌洋帅帅 版权所有©2018-∞ </div>
+</div>
+
+<script src="{% static 'MySelenium/tongji.js' %}"></script>
+
+<script type="text/javascript"  src="{% static 'MySelenium/su.js' %}"></script>
+</body>
+</html>

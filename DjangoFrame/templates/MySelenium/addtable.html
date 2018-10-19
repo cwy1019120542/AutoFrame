@@ -1,0 +1,751 @@
+{% extends 'MySelenium/base.html' %}
+{% block content %}
+{% if message %}
+<div class="alert alert-warning" role="alert">
+	<p class='text-center'>{{message}}</p>
+</div>
+{% endif %}
+<form action="" method="POST">
+<div class="row">
+	<div class="col-md-2 col-md-offset-2">
+	{{form.name.label_tag}}
+	{{form.name}}
+	</div>
+	<div class="col-md-2 col-md-offset-4">
+	{{form.day_before.label_tag}}
+	{{form.day_before}}
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-1 col-md-offset-1"><p class="text-center">操作</p></div>
+	<div class="col-md-1"><p class="text-center">元素名1</p></div>
+	<div class="col-md-2"><p class="text-center">元素值1</p></div>
+	<div class="col-md-1"><p class="text-center">元素名2</p></div>
+	<div class="col-md-2"><p class="text-center">元素值2</p></div>
+	<div class="col-md-3"><p class="text-center">附加内容</p></div>
+	<div class="col-md-1"><p class="text-center">等待时间</p></div>
+</div>
+<div class="row">
+	<center><div class="col-md-1">操作1:</div></center>
+	<div class="col-md-1">
+		{{form.operate_name1}}
+	</div>
+	<div class="col-md-1">
+		{{form.element1_name1}}
+	</div>
+	<div class="col-md-2">
+		{{form.element1_value1}}
+	</div>
+	<div class="col-md-1">
+		{{form.element2_name1}}
+	</div>
+	<div class="col-md-2">
+		{{form.element2_value1}}
+	</div>
+	<div class="col-md-3">
+		{{form.extra1}}
+	</div>
+	<div class="col-md-1">
+		{{form.wait_time1}}
+	</div>
+	
+</div>
+<div class="row">
+	<center><div class="col-md-1">操作2:</div></center>
+	<div class="col-md-1">
+		{{form.operate_name2}}
+	</div>
+	<div class="col-md-1">
+		{{form.element1_name2}}
+	</div>
+	<div class="col-md-2">
+		{{form.element1_value2}}
+	</div>
+	<div class="col-md-1">
+		{{form.element2_name2}}
+	</div>
+	<div class="col-md-2">
+		{{form.element2_value2}}
+	</div>
+	<div class="col-md-3">
+		{{form.extra2}}
+	</div>
+	<div class="col-md-1">
+		{{form.wait_time2}}
+	</div>
+</div>
+<div class="row">		
+	<center><div class="col-md-1">操作3:</div></center>	
+	<div class="col-md-1">	
+		{{form.operate_name3}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element1_name3}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element1_value3}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element2_name3}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element2_value3}}
+	</div>	
+	<div class="col-md-3">	
+		{{form.extra3}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.wait_time3}}
+	</div>	
+</div>		
+<div class="row">		
+	<center><div class="col-md-1">操作4:</div></center>	
+	<div class="col-md-1">	
+		{{form.operate_name4}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element1_name4}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element1_value4}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element2_name4}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element2_value4}}
+	</div>	
+	<div class="col-md-3">	
+		{{form.extra4}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.wait_time4}}
+	</div>	
+</div>		
+<div class="row">		
+	<center><div class="col-md-1">操作5:</div></center>	
+	<div class="col-md-1">	
+		{{form.operate_name5}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element1_name5}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element1_value5}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element2_name5}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element2_value5}}
+	</div>	
+	<div class="col-md-3">	
+		{{form.extra5}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.wait_time5}}
+	</div>	
+</div>		
+<div class="row">		
+	<center><div class="col-md-1">操作6:</div></center>	
+	<div class="col-md-1">	
+		{{form.operate_name6}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element1_name6}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element1_value6}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element2_name6}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element2_value6}}
+	</div>	
+	<div class="col-md-3">	
+		{{form.extra6}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.wait_time6}}
+	</div>	
+</div>		
+<div class="row">		
+	<center><div class="col-md-1">操作7:</div></center>	
+	<div class="col-md-1">	
+		{{form.operate_name7}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element1_name7}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element1_value7}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element2_name7}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element2_value7}}
+	</div>	
+	<div class="col-md-3">	
+		{{form.extra7}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.wait_time7}}
+	</div>	
+</div>		
+<div class="row">		
+	<center><div class="col-md-1">操作8:</div></center>	
+	<div class="col-md-1">	
+		{{form.operate_name8}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element1_name8}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element1_value8}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element2_name8}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element2_value8}}
+	</div>	
+	<div class="col-md-3">	
+		{{form.extra8}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.wait_time8}}
+	</div>	
+</div>		
+<div class="row">		
+	<center><div class="col-md-1">操作9:</div></center>	
+	<div class="col-md-1">	
+		{{form.operate_name9}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element1_name9}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element1_value9}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element2_name9}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element2_value9}}
+	</div>	
+	<div class="col-md-3">	
+		{{form.extra9}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.wait_time9}}
+	</div>	
+</div>		
+<div class="row">		
+	<center><div class="col-md-1">操作10:</div></center>	
+	<div class="col-md-1">	
+		{{form.operate_name10}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element1_name10}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element1_value10}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element2_name10}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element2_value10}}
+	</div>	
+	<div class="col-md-3">	
+		{{form.extra10}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.wait_time10}}
+	</div>	
+</div>		
+<div class="row">		
+	<center><div class="col-md-1">操作11:</div></center>	
+	<div class="col-md-1">	
+		{{form.operate_name11}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element1_name11}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element1_value11}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element2_name11}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element2_value11}}
+	</div>	
+	<div class="col-md-3">	
+		{{form.extra11}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.wait_time11}}
+	</div>	
+</div>		
+<div class="row">		
+	<center><div class="col-md-1">操作12:</div></center>	
+	<div class="col-md-1">	
+		{{form.operate_name12}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element1_name12}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element1_value12}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element2_name12}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element2_value12}}
+	</div>	
+	<div class="col-md-3">	
+		{{form.extra12}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.wait_time12}}
+	</div>	
+</div>		
+<div class="row">		
+	<center><div class="col-md-1">操作13:</div></center>	
+	<div class="col-md-1">	
+		{{form.operate_name13}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element1_name13}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element1_value13}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element2_name13}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element2_value13}}
+	</div>	
+	<div class="col-md-3">	
+		{{form.extra13}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.wait_time13}}
+	</div>	
+</div>		
+<div class="row">		
+	<center><div class="col-md-1">操作14:</div></center>	
+	<div class="col-md-1">	
+		{{form.operate_name14}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element1_name14}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element1_value14}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element2_name14}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element2_value14}}
+	</div>	
+	<div class="col-md-3">	
+		{{form.extra14}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.wait_time14}}
+	</div>	
+</div>		
+<div class="row">		
+	<center><div class="col-md-1">操作15:</div></center>	
+	<div class="col-md-1">	
+		{{form.operate_name15}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element1_name15}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element1_value15}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element2_name15}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element2_value15}}
+	</div>	
+	<div class="col-md-3">	
+		{{form.extra15}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.wait_time15}}
+	</div>	
+</div>		
+<div class="row">		
+	<center><div class="col-md-1">操作16:</div></center>	
+	<div class="col-md-1">	
+		{{form.operate_name16}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element1_name16}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element1_value16}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element2_name16}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element2_value16}}
+	</div>	
+	<div class="col-md-3">	
+		{{form.extra16}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.wait_time16}}
+	</div>	
+</div>		
+<div class="row">		
+	<center><div class="col-md-1">操作17:</div></center>	
+	<div class="col-md-1">	
+		{{form.operate_name17}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element1_name17}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element1_value17}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element2_name17}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element2_value17}}
+	</div>	
+	<div class="col-md-3">	
+		{{form.extra17}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.wait_time17}}
+	</div>	
+</div>		
+<div class="row">		
+	<center><div class="col-md-1">操作18:</div></center>	
+	<div class="col-md-1">	
+		{{form.operate_name18}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element1_name18}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element1_value18}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element2_name18}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element2_value18}}
+	</div>	
+	<div class="col-md-3">	
+		{{form.extra18}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.wait_time18}}
+	</div>	
+</div>		
+<div class="row">		
+	<center><div class="col-md-1">操作19:</div></center>	
+	<div class="col-md-1">	
+		{{form.operate_name19}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element1_name19}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element1_value19}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element2_name19}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element2_value19}}
+	</div>	
+	<div class="col-md-3">	
+		{{form.extra19}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.wait_time19}}
+	</div>	
+</div>		
+<div class="row">		
+	<center><div class="col-md-1">操作20:</div></center>	
+	<div class="col-md-1">	
+		{{form.operate_name20}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element1_name20}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element1_value20}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element2_name20}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element2_value20}}
+	</div>	
+	<div class="col-md-3">	
+		{{form.extra20}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.wait_time20}}
+	</div>	
+</div>
+<div class="row">		
+	<center><div class="col-md-1">操作21:</div></center>	
+	<div class="col-md-1">	
+		{{form.operate_name21}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element1_name21}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element1_value21}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element2_name21}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element2_value21}}
+	</div>	
+	<div class="col-md-3">	
+		{{form.extra21}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.wait_time21}}
+	</div>	
+</div>		
+<div class="row">		
+	<center><div class="col-md-1">操作22:</div></center>	
+	<div class="col-md-1">	
+		{{form.operate_name22}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element1_name22}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element1_value22}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element2_name22}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element2_value22}}
+	</div>	
+	<div class="col-md-3">	
+		{{form.extra22}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.wait_time22}}
+	</div>	
+</div>		
+<div class="row">		
+	<center><div class="col-md-1">操作23:</div></center>	
+	<div class="col-md-1">	
+		{{form.operate_name23}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element1_name23}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element1_value23}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element2_name23}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element2_value23}}
+	</div>	
+	<div class="col-md-3">	
+		{{form.extra23}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.wait_time23}}
+	</div>	
+</div>		
+<div class="row">		
+	<center><div class="col-md-1">操作24:</div></center>	
+	<div class="col-md-1">	
+		{{form.operate_name24}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element1_name24}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element1_value24}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element2_name24}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element2_value24}}
+	</div>	
+	<div class="col-md-3">	
+		{{form.extra24}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.wait_time24}}
+	</div>	
+</div>		
+<div class="row">		
+	<center><div class="col-md-1">操作25:</div></center>	
+	<div class="col-md-1">	
+		{{form.operate_name25}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element1_name25}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element1_value25}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element2_name25}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element2_value25}}
+	</div>	
+	<div class="col-md-3">	
+		{{form.extra25}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.wait_time25}}
+	</div>	
+</div>		
+<div class="row">		
+	<center><div class="col-md-1">操作26:</div></center>	
+	<div class="col-md-1">	
+		{{form.operate_name26}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element1_name26}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element1_value26}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element2_name26}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element2_value26}}
+	</div>	
+	<div class="col-md-3">	
+		{{form.extra26}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.wait_time26}}
+	</div>	
+</div>		
+<div class="row">		
+	<center><div class="col-md-1">操作27:</div></center>	
+	<div class="col-md-1">	
+		{{form.operate_name27}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element1_name27}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element1_value27}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element2_name27}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element2_value27}}
+	</div>	
+	<div class="col-md-3">	
+		{{form.extra27}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.wait_time27}}
+	</div>	
+</div>		
+<div class="row">		
+	<center><div class="col-md-1">操作28:</div></center>	
+	<div class="col-md-1">	
+		{{form.operate_name28}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element1_name28}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element1_value28}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element2_name28}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element2_value28}}
+	</div>	
+	<div class="col-md-3">	
+		{{form.extra28}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.wait_time28}}
+	</div>	
+</div>		
+<div class="row">		
+	<center><div class="col-md-1">操作29:</div></center>	
+	<div class="col-md-1">	
+		{{form.operate_name29}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element1_name29}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element1_value29}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element2_name29}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element2_value29}}
+	</div>	
+	<div class="col-md-3">	
+		{{form.extra29}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.wait_time29}}
+	</div>	
+</div>		
+<div class="row">		
+	<center><div class="col-md-1">操作30:</div></center>	
+	<div class="col-md-1">	
+		{{form.operate_name30}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element1_name30}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element1_value30}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.element2_name30}}
+	</div>	
+	<div class="col-md-2">	
+		{{form.element2_value30}}
+	</div>	
+	<div class="col-md-3">	
+		{{form.extra30}}
+	</div>	
+	<div class="col-md-1">	
+		{{form.wait_time30}}
+	</div>	
+</div>		
+<center><button type="submit" class="btn btn-success btn-lg">保存</button></center>
+</form>
+{% endblock content %}
